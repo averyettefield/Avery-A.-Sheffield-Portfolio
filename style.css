@@ -83,11 +83,20 @@ nav a:hover {
     text-align: center;
     padding: 80px 20px;
 }
-.hero-center {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-}
+<div class="button-cluster decoration" aria-hidden="true">
+    <span>✿</span>
+    <span>✿</span>
+    <span>✿</span>
+</div>
+
+<div class="thread decoration" aria-hidden="true">
+    ~~~~~~~
+</div>
+
+<div class="location-decoration decoration" aria-hidden="true">
+    ♡
+    <span>Austin, TX</span>
+</div>
 
 .hero .intro {
     font-family: "Courier New", monospace;
@@ -286,7 +295,22 @@ nav a:hover {
     color: white;
 }
 @media (max-width: 700px) {
+.decoration {
+    display: none;
+}
 
+.retro-window {
+    display: none;
+}
+
+.hero-icon {
+    position: static;
+    margin: 20px 10px 0;
+}
+
+.hero {
+    min-height: 90vh;
+}
     .feature-grid {
         grid-template-columns: 1fr;
     }
@@ -492,4 +516,129 @@ section h2 {
 
     font-family: "Courier New", monospace;
     font-size: 32px;
+}
+.decoration {
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+}
+
+.button-cluster {
+    top: 8%;
+    left: 5%;
+
+    display: flex;
+    gap: 6px;
+
+    font-size: 34px;
+    color: var(--rose);
+    transform: rotate(-10deg);
+}
+
+.thread {
+    top: 28%;
+    left: 3%;
+
+    font-family: "Courier New", monospace;
+    font-size: 38px;
+    letter-spacing: -8px;
+
+    color: var(--pink);
+    transform: rotate(25deg);
+}
+
+.location-decoration {
+    top: 10%;
+    right: 6%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--rose-dark);
+
+    font-size: 50px;
+}
+
+.location-decoration span {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* Gentle floating animation for the retro window */
+@keyframes float-window {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.retro-window {
+    animation: float-window 4s ease-in-out infinite;
+}
+
+
+/* Slight movement for the decorative buttons */
+@keyframes drift {
+    0%, 100% {
+        transform: rotate(-10deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-7deg) translateY(-5px);
+    }
+}
+
+.button-cluster {
+    animation: drift 5s ease-in-out infinite;
+}
+
+
+/* START button feels like a physical computer button */
+.start-button {
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+.start-button:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 var(--ink);
+}
+
+
+/* Navigation buttons also feel pressable */
+nav a {
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+/* Project cards gently lift when hovered */
+.project-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0 var(--pink);
+}
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
 }
