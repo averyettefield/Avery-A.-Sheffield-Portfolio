@@ -40,19 +40,39 @@ p {
     line-height: 1.6;
 }
 nav {
+    position: relative;
+    z-index: 10;
+
     display: flex;
-    gap: 25px;
-    padding: 20px 0;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 16px 0;
+
+    font-family: "Courier New", monospace;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
+    padding: 7px 12px;
+
+    color: var(--ink);
+    background: var(--grey);
+
+    border: 2px solid var(--ink);
+
+    font-size: 13px;
     font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 2px 2px 0 var(--ink);
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: var(--pink-light);
+    text-decoration: none;
+
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--ink);
 }
 .hero {
     min-height: 100vh;
@@ -135,9 +155,13 @@ nav a:hover {
 }
 
 .project-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
+    border: 2px solid var(--ink);
+    border-radius: 0;
     padding: 30px;
+
+    background: white;
+
+    box-shadow: 5px 5px 0 var(--pink);
 }
 
 .project-card h3 {
@@ -262,11 +286,10 @@ nav a:hover {
     color: white;
 }
 @media (max-width: 700px) {
+
     .feature-grid {
-    grid-template-columns: 1fr;
-}.feature-grid {
-    grid-template-columns: 1fr;
-}
+        grid-template-columns: 1fr;
+    }
 
     body {
         padding: 20px;
@@ -454,4 +477,19 @@ nav a:hover {
 .hero-icon:hover {
     color: var(--pink);
     transform: rotate(-3deg);
+}
+section {
+    margin: 40px 0;
+    padding: 60px 45px;
+
+    background: var(--cream);
+    border: 2px solid var(--ink);
+    box-shadow: 7px 7px 0 var(--pink-light);
+}
+
+section h2 {
+    margin-top: 0;
+
+    font-family: "Courier New", monospace;
+    font-size: 32px;
 }
