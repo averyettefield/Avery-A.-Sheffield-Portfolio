@@ -55,7 +55,36 @@ nav a:hover {
     text-decoration: underline;
 }
 .hero {
-    padding: 100px 0;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero-center {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero .intro {
+    font-family: "Courier New", monospace;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.portfolio-label {
+    font-family: "Courier New", monospace;
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.hero-description {
+    margin: 0 auto 35px;
+    max-width: 650px;
 }
 
 .intro {
@@ -63,9 +92,6 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.hero h1 {
-    margin: 0;
-}
 
 .subtitle {
     font-family: "Courier New", monospace;
@@ -340,4 +366,92 @@ nav a:hover {
 #development li {
     margin-bottom: 10px;
     line-height: 1.5;
+}
+.start-button {
+    display: inline-block;
+    min-width: 220px;
+    padding: 16px 35px;
+
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+    font-weight: bold;
+
+    color: var(--ink);
+    background: var(--grey);
+
+    border: 4px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+
+    text-decoration: none;
+}
+
+.start-button:hover {
+    background: var(--pink-light);
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 var(--ink);
+}
+.retro-window {
+    position: absolute;
+    right: 4%;
+    bottom: 8%;
+
+    width: 260px;
+
+    border: 3px solid var(--ink);
+    background: var(--cream);
+
+    text-align: left;
+}
+
+.window-bar {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 7px 10px;
+
+    font-family: "Courier New", monospace;
+
+    background: var(--pink);
+    border-bottom: 3px solid var(--ink);
+}
+
+.window-content {
+    padding: 25px 15px;
+
+    font-family: "Courier New", monospace;
+}
+.hero-icon {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 55px;
+
+    color: var(--rose-dark);
+    text-decoration: none;
+}
+
+.hero-icon span {
+    margin-top: 5px;
+
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.envelope {
+    left: 5%;
+    bottom: 12%;
+}
+
+.folder {
+    right: 7%;
+    top: 12%;
+}
+
+.hero-icon:hover {
+    color: var(--pink);
+    transform: rotate(-3deg);
 }
