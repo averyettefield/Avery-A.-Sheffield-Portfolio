@@ -1,19 +1,35 @@
 * {
     box-sizing: border-box;
 }
-
+:root {
+    --background: #fffdfc;
+    --pink-light: #ffd6dc;
+    --pink: #f4a9bb;
+    --rose: #bd7892;
+    --rose-dark: #8e526b;
+    --cream: #fff7f2;
+    --ink: #17152c;
+    --grey: #c7c7c7;
+}
 html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
+    font-family: Georgia, serif;
+    max-width: 1100px;
     margin: auto;
     padding: 40px;
+    background: var(--background);
+    color: var(--ink);
 }
 
-h1 {
-    font-size: 60px;
+.hero h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(60px, 9vw, 120px);
+    font-weight: normal;
+    color: var(--pink);
+    line-height: 0.95;
 }
 
 h2 {
@@ -52,10 +68,11 @@ nav a:hover {
 }
 
 .subtitle {
-    font-size: 22px;
+    font-family: "Courier New", monospace;
+    font-size: 28px;
     font-weight: bold;
+    color: var(--ink);
 }
-
 .hero-description {
     max-width: 650px;
     font-size: 18px;
@@ -194,7 +211,7 @@ nav a:hover {
     white-space: nowrap;
 }
 
-}
+
 #contact {
     padding: 80px 0;
 }
@@ -219,6 +236,11 @@ nav a:hover {
     color: white;
 }
 @media (max-width: 700px) {
+    .feature-grid {
+    grid-template-columns: 1fr;
+}.feature-grid {
+    grid-template-columns: 1fr;
+}
 
     body {
         padding: 20px;
@@ -259,4 +281,63 @@ nav a:hover {
         flex-wrap: wrap;
     }
 
+}
+.project-hero {
+    padding: 100px 0 60px;
+}
+
+#overview,
+#features,
+#development {
+    padding: 60px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
+
+#development li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}.project-hero {
+    padding: 100px 0 60px;
+}
+
+#overview,
+#features,
+#development {
+    padding: 60px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
+
+#development li {
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
