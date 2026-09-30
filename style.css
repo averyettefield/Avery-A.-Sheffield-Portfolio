@@ -829,12 +829,11 @@ section h2 {
 body {
     padding: 20px;
 
-    background-color: #fff5f7;
-    background-image:
-        linear-gradient(rgba(189, 120, 146, 0.45) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(189, 120, 146, 0.45) 1px, transparent 1px);
-    background-size: 24px 24px;
-    background-position: 0 0;
+    background-color: #fff1f4;
+    background-image: url("images/imagesaustin-mobile-background.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: repeat-y;
     background-attachment: scroll;
 }
     nav {
