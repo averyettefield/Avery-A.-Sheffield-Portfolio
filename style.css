@@ -1087,3 +1087,7 @@ a:focus-visible {
 
     color: var(--rose-dark);
 }
+.contact-window-bar h2 {
+    margin: 0;
+    font: inherit;
+}
