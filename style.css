@@ -127,15 +127,10 @@ nav a:hover {
 
 .hero .intro {
     font-family: "Courier New", monospace;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    .hero .intro {
-    font-family: "Courier New", monospace;
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 20px;
     transform: translateY(10px);
-}
 }
 
 .portfolio-label {
@@ -395,13 +390,6 @@ section h2 {
     font-size: 14px;
     color: var(--rose-dark);
 }
-    letter-spacing: 2px;
-}
-
-.profile-location {
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-}
 
 .profile-details {
     display: flex;
@@ -458,6 +446,14 @@ section h2 {
     font-weight: bold;
 }
 
+.future-projects {
+    margin-top: 45px;
+}
+
+.future-projects-label {
+    margin-bottom: 15px;
+}
+
 .project-body {
     padding: 30px;
 }
@@ -472,6 +468,7 @@ section h2 {
 
     color: var(--rose-dark);
 }
+
 
 .project-status {
     margin: 0;
