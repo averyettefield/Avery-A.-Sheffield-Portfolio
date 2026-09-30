@@ -13,22 +13,29 @@
 }
 html {
     scroll-behavior: smooth;
-}
-body {
-    font-family: Georgia, serif;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px;
 
-    background-color: var(--background);
+    background-color: #fff1f4;
     background-image: url("images/austin-pixel-skyline.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+body {
+    font-family: Georgia, serif;
+
+    max-width: 1100px;
+    min-height: 100vh;
+
+    margin: auto;
+    padding: 40px;
+
+    background: transparent;
 
     color: var(--ink);
 }
+
 
 .hero h1 {
     margin: 0;
@@ -738,6 +745,7 @@ section h2 {
    ========================= */
 
 .contact-window {
+    position: relative;
     border: 3px solid var(--ink);
     background: white;
     box-shadow: 8px 8px 0 var(--pink);
@@ -783,7 +791,7 @@ section h2 {
 }
 
 .contact-description {
-    max-width: 700px;
+   max-width: 620px;
     margin-bottom: 30px;
 }
 
@@ -819,6 +827,49 @@ section h2 {
     background: var(--pink-light);
     transform: translate(1px, 1px);
     box-shadow: 2px 2px 0 var(--ink);
+}/* Small floating resume request window */
+.resume-window {
+    position: absolute;
+    right: -22px;
+    bottom: 28px;
+
+    width: 215px;
+
+    background: var(--cream);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--pink);
+
+    font-family: "Courier New", monospace;
+
+    animation: float-window 4s ease-in-out infinite;
+}
+
+.resume-window-bar {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px 8px;
+
+    background: var(--pink);
+    border-bottom: 2px solid var(--ink);
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.resume-email {
+    display: block;
+    padding: 14px 10px;
+
+    color: var(--ink);
+
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.resume-email:hover {
+    background: var(--pink-light);
 }
 /* =========================
    MOBILE
@@ -826,15 +877,18 @@ section h2 {
 
 @media (max-width: 700px) {
 
-body {
-    padding: 20px;
-
+html {
     background-color: #fff1f4;
     background-image: url("images/imagesaustin-mobile-background.png");
     background-size: 100% auto;
     background-position: top center;
     background-repeat: repeat-y;
     background-attachment: scroll;
+}
+
+body {
+    padding: 20px;
+    background: transparent;
 }
     nav {
         flex-wrap: wrap;
@@ -966,9 +1020,17 @@ body {
         align-items: stretch;
     }
 
-    .contact-links a {
-        text-align: center;
-    }
+   .contact-links a {
+    text-align: center;
+}
+
+.resume-window {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+    animation: none;
+}
+
 }
 .skills-window-bar h2 {
     margin: 0;
@@ -1020,7 +1082,6 @@ a:focus-visible {
     margin: 0;
     font: inherit;
 }
-
 /* Standalone portfolio pages */
 body:not(:has(.hero)) main {
     min-height: calc(100vh - 120px);
