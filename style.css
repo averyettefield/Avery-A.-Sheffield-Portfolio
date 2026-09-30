@@ -1020,3 +1020,14 @@ a:focus-visible {
     margin: 0;
     font: inherit;
 }
+
+/* Standalone portfolio pages */
+body:not(:has(.hero)) main {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+}
+
+body:not(:has(.hero)) main > section {
+    width: 100%;
+}
