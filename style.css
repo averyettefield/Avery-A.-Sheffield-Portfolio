@@ -285,7 +285,7 @@ section {
     margin: 40px 0;
     padding: 25px;
 
-    background: var(--cream);
+   background: rgba(255, 247, 242, 0.92);
     border: 2px solid var(--ink);
     box-shadow: 7px 7px 0 var(--pink-light);
 }
