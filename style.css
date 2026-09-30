@@ -157,97 +157,32 @@ nav a:hover {
     font-weight: bold;
 }
 
-.project-link {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
 
-.project-link:hover {
-    text-decoration: underline;
-}
 #skills {
     padding: 60px 0;
 }
 
-.skill-group {
-    padding: 25px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-}
+
 
 #education {
     padding: 60px 0;
 }
 
-.education-degree {
-    font-weight: bold;
-}
+
 #experience {
     padding: 60px 0;
 }
 
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
+
 
 #contact {
     padding: 80px 0;
 }
 
-.contact-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.contact-links a {
-    padding: 10px 18px;
-    border: 1px solid black;
-    border-radius: 6px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-links a:hover {
-    background: black;
-    color: white;
-}
 
 
-.project-hero {
-    padding: 100px 0 60px;
-}
 
-#overview,
-#features,
-#development {
-    padding: 60px 0;
-}
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.feature-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 25px;
-}
-
-.feature-card h3 {
-    margin-top: 0;
-}
-
-#development li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
 .start-button {
     display: inline-block;
     min-width: 220px;
