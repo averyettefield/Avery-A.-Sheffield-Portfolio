@@ -1092,3 +1092,28 @@ body:not(:has(.hero)) main {
 body:not(:has(.hero)) main > section {
     width: 100%;
 }
+/* Featured project website button */
+.project-body > a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 16px;
+    background: #ffd6dc;
+    color: #17152c;
+    border: 2px solid #17152c;
+    box-shadow: 3px 3px 0 #bd7892;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-body > a:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #bd7892;
+}
+
+.project-body > a:focus-visible {
+    outline: 3px solid #17152c;
+    outline-offset: 4px;
+}
